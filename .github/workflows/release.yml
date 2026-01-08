@@ -1,6 +1,6 @@
 name: Manual Build & Release
 
-# 核心 1: 触发方式改为 workflow_dispatch (手动触发)
+# 核心 1: 触发方式 workflow_dispatch (手动触发)
 on:
   workflow_dispatch:
     inputs:
@@ -55,6 +55,6 @@ jobs:
         draft: false
         prerelease: false
         # 上传 dist 文件夹下的 exe 文件
-        files: dist/PPT_Searcher.exe
+        files: dist/*.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
